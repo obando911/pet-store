@@ -1,15 +1,26 @@
 <?php
 $host = "localhost";
 $port = "5432";
-$dbname = "pets";
+$dbname = "petstore";
 $user = "postgres";
 $password = "unicesmag";
 
-$conn = "
+$data_connection = "
 host = $host
 port = $port
 dbname = $dbname
 user = $user
 password = $password"
+;
+
+$conn = pg_connect($data_connection);
+
+if(!$conn){
+    echo "Conection error";
+}else{
+    echo "Success !!!";
+}
+
+pg_close($conn)
 
 ?>
