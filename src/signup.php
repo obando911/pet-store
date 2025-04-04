@@ -19,9 +19,8 @@ if($ans){ //$ans == true
     $row = pg_fetch_assoc($ans);
     if($row['total'] > 0){
         echo "User alredy exists !!!";
-    }
-}else{
-            $sql = "INSERT INTO users (firstname, lastname, email, password)
+    }else{
+        $sql = "INSERT INTO users (firstname, lastname, email, password)
             VALUES ('$fname','$lname','$email','$passw')
             ";
             $ans = pg_query($conn, $sql);
@@ -29,6 +28,9 @@ if($ans){ //$ans == true
             if($ans){
             echo "User has been created succesfully";
             }
+    }
+}else{
+            
 
 }
 
