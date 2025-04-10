@@ -27,13 +27,14 @@ if($ans){ //$ans == true
 
             if($ans){
             echo "User has been created succesfully";
-            }
+            }else{
+            echo "Error";     
+        }
+
     }
-}else{
-            
-
-}
-
+    }else{
+        echo "Query Error"
+    }
 
 
 ?>
