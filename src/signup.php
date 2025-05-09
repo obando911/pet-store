@@ -31,9 +31,8 @@ if ($row['total'] > 0) {
     $ans = pg_query_params($conn, $sql, array($fname, $lname, $email, $hashed_password));
 
     if ($ans) {
-        //echo "User has been created successfully";
-        echo "<script>alert('User has been created. Go to login!')</script>";
-        header('refresh:0;URL=http://localhost/pet-store/src/signin.html');
+        echo "User has been created successfully";
+        //echo "<script>"
     } else {
         echo "Error inserting user";
     }
